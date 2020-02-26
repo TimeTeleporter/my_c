@@ -13,7 +13,7 @@ int main() {
 	
 	double x = -b / a;
 	
-	printf("Die Loesung ist x = %lf", x);
+	printf("Die Loesung ist x = %lf\n", x);
 	
 	return 0;
 }
