@@ -1,0 +1,2 @@
+The float version adds another 6.- when adding 200 mil on 10.-.
+The Integer version gets an overflow when adding 200 mil ontop of 2100000000.-, but has no problem adding 0.
