@@ -2,15 +2,21 @@
 #include <string.h>
 
 int array_size(char **arr) {
-    return sizeof(arr)/sizeof(*arr);
+    int size = 0;
+
+    while(*(arr++)) {
+        size += 1;
+    }
+
+    return size;
 }
 
 int main() {
-    char* strings[] = {"a", "b", "A", "B"};
+    char* strings[] = {"a", "b", "A", "B", NULL};
     int num_strings = array_size(strings);
     printf("strings has %d elements.\n", num_strings);
     
-    printf("%d\n", sizeof(strings)/sizeof(*strings));
-    
+    printf("%d\n", sizeof(strings)/sizeof(*strings) -1 );
+
     return 0;
 }
