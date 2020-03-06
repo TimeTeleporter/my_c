@@ -76,21 +76,21 @@ int date_cmp(int* ptr1, int* ptr2) {
 }
 
 int main() {
-    /* Initializing the days of the week. */
-    char* weekdays[] = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
-    int weekdays_size = sizeof(weekdays)/sizeof(*weekdays);
-    int monday[3] = {9, 3, 2020};
-
     printf("Enter the date of today. ");
     int* temp = read_date();
-    int date[3] = {*(temp), *(temp+1), *(temp+2)};
+    int date1[3] = {*(temp), *(temp+1), *(temp+2)};
 
-    int weekday = date_cmp(date, monday) % 7;
-    if(weekday < 0) {
-        weekday = 7 + weekday;
+    printf("Enter the date to compare to. ");
+    temp = read_date();
+    int date2[3] = {*(temp), *(temp+1), *(temp+2)};
+
+    int diff = date_cmp(date1, date2);
+    if(diff == 0) {
+        printf("The dates are equal!\n");
     }
-
-    printf("It's %s!\n", weekdays[weekday]);
+    else {
+        printf("The dates are off by %d days.", diff);
+    }
 
     return 0;
 }
