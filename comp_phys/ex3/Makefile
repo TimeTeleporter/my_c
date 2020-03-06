@@ -6,3 +6,4 @@ all:
 	gcc .\src\quadratic_eq.c -o .\bin\quadratic_eq.exe
 	gcc .\src\datecmp.c -o .\bin\datecmp.exe
 	gcc .\src\weekdays.c -o .\bin\weekdays.exe
+	gcc .\src\repeater.c -o .\bin\repeater.exe

@@ -2,7 +2,8 @@
     "files.associations": {
         "cmath": "c",
         "*.tcc": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "math.h": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
