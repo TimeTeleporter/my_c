@@ -1,0 +1,3 @@
+all:
+	gcc .\src\hello20.c -o .\bin\hello20.exe
+	gcc .\src\throwing_stone.c -o .\bin\throwing_stone.exe
