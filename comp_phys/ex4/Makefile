@@ -3,3 +3,4 @@ all:
 	gcc .\src\throwing_stone.c -o .\bin\throwing_stone.exe
 	gcc .\src\interest.c -o .\bin\interest.exe
 	gcc .\src\prime.c -o .\bin\prime.exe
+	gcc .\src\bouncy.c -o .\bin\bouncy.exe
