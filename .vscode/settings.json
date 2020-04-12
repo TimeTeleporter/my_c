@@ -3,7 +3,8 @@
         "cmath": "c",
         "*.tcc": "c",
         "stdio.h": "c",
-        "math.h": "c"
+        "math.h": "c",
+        "stdlib.h": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
