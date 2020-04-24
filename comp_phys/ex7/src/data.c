@@ -2,11 +2,16 @@
 #include <math.h>
 #include <stdlib.h>
 
+void printarray(float*, int);
+
 int main() {
     /* Initialization */
     int array_size = 0;
     float* array = (float*) malloc(sizeof(float)*array_size);
     for(int i = 0; i<array_size; i++) array[i] = .0;
+
+    float* append;
+    float* new_array;
 
     /* Input */
     while(1) {
@@ -19,10 +24,10 @@ int main() {
 
         int new_array_size = array_size+append_size;
 
-        float* append = (float*) malloc(sizeof(float)*append_size);
+        append = (float*) malloc(sizeof(float)*append_size);
         for(int i = 0; i<append_size; i++) append[i] = .0;
 
-        float* new_array = (float*) malloc(sizeof(float)*new_array_size);
+        new_array = (float*) malloc(sizeof(float)*new_array_size);
         for(int i = 0; i<array_size; i++) new_array[i] = array[i];
         for(int i = array_size; i<new_array_size; i++) new_array[i] = .0;
 
@@ -32,9 +37,9 @@ int main() {
         }
 
         for(int i = 0; i<append_size; i++) new_array[i+array_size] = append[i];
-        free(append);
 
         array = new_array;
+        array_size = new_array_size;
     }
 
     /* Logic */
@@ -52,6 +57,8 @@ int main() {
     printf("The average of the given values is: %lf\n", average);
     printf("The standard deviation is: %lf\n", sd);
 
+    free(append);
+    free(new_array);
     free(array);
 
     return 0;
