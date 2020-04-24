@@ -1,2 +1,2 @@
 all:
-	gcc .\src\ -o .\bin\
+	gcc .\src\data.c -o .\bin\data.exe
