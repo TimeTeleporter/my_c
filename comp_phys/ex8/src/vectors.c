@@ -35,6 +35,8 @@ int main() {
     Vector3D cross;
     vec3D__init__(&cross, "v1xv2");
     crossproduct(v1, v2, &cross);
+
+    return 0;
 }
 
 void vec3D__init__(Vector3D* ptr, char* name) {
